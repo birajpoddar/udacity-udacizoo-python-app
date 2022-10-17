@@ -1,0 +1,11 @@
+# Mac OS File
+.DS_Store
+
+# Python virtual env
+venv
+
+# Python caches
+__pycache__
+
+# Environmrnt variables(including SECRETS)
+.env
