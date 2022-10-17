@@ -1,0 +1,15 @@
+create table animals(
+    id int IDENTITY(1,1) CONSTRAINT pkAnim PRIMARY KEY,
+    name VARCHAR(75) NOT NULL,
+    scientific_name VARCHAR(75) NOT NULL,
+    description VARCHAR(800) CONSTRAINT ckDesc CHECK(LEN(description) >= 10),
+    image_path VARCHAR(100) CONSTRAINT ckImgP CHECK(LEN(image_path) >= 3)
+)
+
+insert into animals values('Cat','Felis catus','The cat is a domestic species of small carnivorous mammal. It is the only domesticated species in the family Felidae and is commonly referred to as the domestic cat or house cat to distinguish it from the wild members of the family.','cat.jpeg')
+insert into animals values('Dog','Canis lupus familiaris','The dog is a domesticated descendant of the wolf. Also called the domestic dog, it is derived from an ancient, extinct wolf, and the modern wolf is the dog''s nearest living relative. The dog was the first species to be domesticated, by hunter-gatherers over 15,000 years ago, before the development of agriculture.','dog.jpeg')
+insert into animals values('Monkey','Cercopithecidae','Old World monkey is the common English name for a family of primates known taxonomically as the Cercopithecidae. Twenty-four genera and 138 species are recognized, making it the largest primate family. Old World monkey genera include baboons, red colobus and macaques.','monkey.jpeg')
+insert into animals values('Tiger','Panthera tigris','The tiger is the largest living cat species and a member of the genus Panthera. It is most recognisable for its dark vertical stripes on orange fur with a white underside. An apex predator, it primarily preys on ungulates, such as deer and wild boar.','tiger.jpeg')
+insert into animals values('Hippo','Hippopotamus amphibius','The hippopotamus, also called the hippo, common hippopotamus, or river hippopotamus, is a large semiaquatic mammal native to sub-Saharan Africa. It is one of only two extant species in the family Hippopotamidae, the other being the pygmy hippopotamus. Its name comes from the ancient Greek for "river horse".','hippo.jpeg')
+insert into animals values('Giraffe','Giraffa','The giraffe is a large African hoofed mammal belonging to the genus Giraffa. It is the tallest living terrestrial animal and the largest ruminant on Earth. Traditionally, giraffes were thought to be one species, Giraffa camelopardalis, with nine subspecies.','giraffe.jpeg')
+insert into animals values('Lion','Panthera leo','The lion is a large cat of the genus Panthera native to Africa and India. It has a muscular, broad-chested body, short, rounded head, round ears, and a hairy tuft at the end of its tail. It is sexually dimorphic; adult male lions are larger than females and have a prominent mane.','lion.jpeg')
